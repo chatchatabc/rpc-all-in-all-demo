@@ -1,21 +1,21 @@
 RPC all-in-one Demo
 ===============================
-         
+
 Spring Boot app with all-in-one RPC demo.
 
 # Protocols
 
 * [HTTP REST API](https://spring.io/guides/tutorials/rest/)
 * [GraphQL](https://graphql.org/): GraphQL over HTTP, WebSocket and RSocket
-* [tRPC](https://trpc.io/)
+* [tRPC](https://trpc.io/): query and mutate support
 * [RSocket](https://rsocket.io/): RSocket over WebSocket, GraphQL support
-* [gRPC](https://grpc.io/): Please refer https://github.com/chatchatabc/grpc-demo 
+* [gRPC](https://grpc.io/): Please refer https://github.com/chatchatabc/grpc-demo
 * [dubbo](https://cn.dubbo.apache.org/en/): please refer https://github.com/chatchatabc/spring-dubbo-demo
-         
+
 # Get Started
 
 ### Start Spring Boot RPC server
-  
+
 Run `mvn spring-boot:run` from the command line or run `RpcBootApp` from your IDE.
 
 ### Start tRPC Server
