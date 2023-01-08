@@ -1,0 +1,27 @@
+package com.chatchatabc.rpc.application.rest;
+
+import com.chatchatabc.rpc.domain.model.Author;
+import com.chatchatabc.rpc.domain.model.Book;
+import com.chatchatabc.rpc.domain.repository.BookRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class BookRestController {
+
+    @Autowired
+    private BookRepository bookRepository;
+
+    @RequestMapping("/book/{id}")
+    public Book findBook(@PathVariable("id") String id) {
+        return bookRepository.findBookById(id);
+    }
+
+    @RequestMapping(path = "/author/{id}")
+    public Author findAuthor(@PathVariable("id") String id) {
+        return bookRepository.findAuthorById(id);
+    }
+
+}
