@@ -1,0 +1,58 @@
+### get book
+GET http://localhost:8080/book/book-1
+
+### get author
+GET http://localhost:8080/author/author-1
+
+### RSocket request
+RSOCKET findBook
+Host: ws://localhost:8080/rsocket
+Content-Type: application/json
+
+"book-1"
+
+### GraphQL over HTTP
+GRAPHQL http://localhost:8080/graphql
+Content-Type: application/graphql
+
+query findBook {
+    findBook(id: "book-1") { id name }
+}
+
+### GraphQL over WebSocket
+GRAPHQL ws://localhost:8080/graphql
+Content-Type: application/graphql
+
+query findBook{
+    findBook(id: "book-1") { id name }
+}
+
+### GraphQL over RSocket
+GRAPHQL rsocketws://localhost:8080/rsocket/graphql
+Content-Type: application/graphql
+
+query findBook{
+    findBook(id: "book-1") { id name }
+}
+
+### trpc query
+#@name trpc-query
+TRPC http://localhost:2022/greeting.hello
+Content-Type: application/json
+
+{
+  "name": "world"
+}
+
+### trpc query by GET
+GET http://localhost:2022/greeting.hello?input=%7B%22name%22%3A%22world%22%7D
+
+### trpc mutate
+#@name trpc-mutate
+TRPCM http://localhost:2022/poster.createPost
+Content-Type: application/json
+
+{
+  "title": "hello world",
+  "text": "check out https://tRPC.io"
+}
