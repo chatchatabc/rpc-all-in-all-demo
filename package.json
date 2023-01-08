@@ -1,0 +1,43 @@
+{
+  "name": "trpc-demo",
+  "version": "0.1.0",
+  "description": "tRPC client/server demo",
+  "main": "src/ts/server.ts",
+  "private": true,
+  "scripts": {
+    "dev:server": "nodemon -e ts -w . -x ts-node ./src/main/ts/server",
+    "dev:client": "tsm ./src/main/ts/client.ts",
+    "dev": "run-p dev:* --print-label",
+    "start": "yarn dev",
+    "build": "tsc",
+    "test-dev": "start-server-and-test 'ts-node src/main/ts/server' 2022 'ts-node src/main/ts/client'",
+    "test-start": "start-server-and-test 'node dist/server' 2022 'node dist/client'"
+  },
+  "author": "linux_china <libing.chen@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@tanstack/react-query": "^4.20.9",
+    "@trpc/client": "^10.8.1",
+    "@trpc/next": "^10.8.1",
+    "@trpc/react-query": "^10.8.1",
+    "@trpc/server": "^10.8.1",
+    "abort-controller": "^3.0.0",
+    "node-fetch": "^3.3.0",
+    "ws": "^8.11.0",
+    "zod": "^3.20.2"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.11",
+    "@types/ws": "^8.5.4",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5",
+    "start-server-and-test": "^1.15.2",
+    "ts-node": "^10.9.1",
+    "tsm": "^2.3.0",
+    "typescript": "^4.9.4",
+    "wait-port": "^1.0.4"
+  },
+  "volta": {
+    "node": "18.13.0"
+  }
+}
