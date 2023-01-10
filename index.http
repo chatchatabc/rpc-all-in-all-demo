@@ -37,19 +37,23 @@ query findBook{
 
 ### trpc query
 #@name trpc-query
-TRPC http://localhost:2022/greeting.hello
+TRPC http://localhost:8080/greeting.hello
 Content-Type: application/json
 
 {
   "name": "world"
 }
 
-### trpc query by GET
-GET http://localhost:2022/greeting.hello?input=%7B%22name%22%3A%22world%22%7D
+### trpc query by primtive type
+#@name trpc-query-string
+TRPC http://localhost:8080/greeting.hello2
+Content-Type: application/json
+
+"linux_china"
 
 ### trpc mutate
 #@name trpc-mutate
-TRPCM http://localhost:2022/poster.createPost
+TRPCM http://localhost:8080/poster.createPost
 Content-Type: application/json
 
 {
