@@ -1,7 +1,6 @@
 package com.chatchatabc.rpc.application.trpc;
 
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
@@ -12,7 +11,7 @@ public class PosterTrpcController {
     }
 
     @PostMapping("/poster.createPost")
-    public TrpcResponse<Poster> createPost(@RequestBody Poster poster) {
+    public TrpcResponse<Poster> createPost(@TrpcInput Poster poster) {
         return TrpcResponse.of(new Poster(UUID.randomUUID().toString(), poster.title, poster.text));
     }
 }
