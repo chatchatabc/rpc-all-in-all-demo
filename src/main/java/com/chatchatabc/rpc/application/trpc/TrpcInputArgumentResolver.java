@@ -20,10 +20,11 @@ import static org.springframework.core.ResolvableType.forClass;
 
 public class TrpcInputArgumentResolver implements HandlerMethodArgumentResolver {
     private final ObjectMapper objectMapper;
-    Jackson2JsonDecoder decoder = new Jackson2JsonDecoder();
+    private final Jackson2JsonDecoder decoder;
 
     public TrpcInputArgumentResolver(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
+        this.decoder = new Jackson2JsonDecoder(objectMapper);
     }
 
     @Override
