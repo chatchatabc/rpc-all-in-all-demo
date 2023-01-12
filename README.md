@@ -10,7 +10,7 @@ Spring Boot app with all-in-one RPC demo.
 * [tRPC](https://trpc.io/): query and mutate support
 * [RSocket](https://rsocket.io/): RSocket over WebSocket, GraphQL support
 * [gRPC](https://grpc.io/): Please refer https://github.com/chatchatabc/grpc-demo
-* [dubbo](https://cn.dubbo.apache.org/en/): please refer https://github.com/chatchatabc/spring-dubbo-demo
+* [Dubbo](https://cn.dubbo.apache.org/en/): please refer https://github.com/chatchatabc/spring-dubbo-demo
 
 # Get Started
 
@@ -30,3 +30,4 @@ Run `npm run dev:server` to start tRPC server and run `npm run dev:client` to st
 * RSocket JetBrains Plugin: https://plugins.jetbrains.com/plugin/18195-rsocket-requests-in-http-client
 * httpx JetBrains Plugin: https://plugins.jetbrains.com/plugin/18807-httpx-requests
 * Spring Custom Property Editor: property editor for JsonNode of Jackson https://www.baeldung.com/spring-mvc-custom-property-editor
+* trpc-spring-boot-starter: Spring Boot Starter for tRPC - https://github.com/linux-china/trpc-spring-boot-starter
