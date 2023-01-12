@@ -51,6 +51,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-rsocket</artifactId>
         </dependency>
+        <!-- tRPC-->
+        <dependency>
+            <groupId>org.mvnsearch</groupId>
+            <artifactId>trpc-spring-boot-starter</artifactId>
+            <version>0.1.0</version>
+        </dependency>
         <!-- unit test-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
