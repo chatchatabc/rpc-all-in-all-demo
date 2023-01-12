@@ -1,16 +1,19 @@
 package com.chatchatabc.rpc.application.trpc;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.jetbrains.annotations.Nullable;
+import org.mvnsearch.spring.boot.trpc.TrpcInput;
+import org.mvnsearch.spring.boot.trpc.TrpcMutate;
+import org.mvnsearch.spring.boot.trpc.TrpcResponse;
+import org.springframework.stereotype.Controller;
 
 import java.util.UUID;
 
-@RestController
+@Controller
 public class PosterTrpcController {
-    record Poster(String id, String title, String text) {
+    record Poster(@Nullable String id, String title, String text) {
     }
 
-    @PostMapping("/poster.createPost")
+    @TrpcMutate("/poster.createPost")
     public TrpcResponse<Poster> createPost(@TrpcInput Poster poster) {
         return TrpcResponse.of(new Poster(UUID.randomUUID().toString(), poster.title, poster.text));
     }
