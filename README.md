@@ -5,8 +5,8 @@ Spring Boot app with all-in-one RPC demo.
 
 # Protocols
 
-* [HTTP REST API](https://spring.io/guides/tutorials/rest/)
-* [GraphQL](https://graphql.org/): GraphQL over HTTP, WebSocket and RSocket
+* [HTTP REST API](https://spring.io/guides/tutorials/rest/):  console - http://localhost:8080/swagger-ui.html
+* [GraphQL](https://graphql.org/): GraphQL over HTTP, WebSocket and RSocket http://localhost:8080/graphiql
 * [tRPC](https://trpc.io/): query and mutate support
 * [RSocket](https://rsocket.io/): RSocket over WebSocket, GraphQL support
 * [gRPC](https://grpc.io/): Please refer https://github.com/chatchatabc/grpc-demo
@@ -31,3 +31,4 @@ Run `npm run dev:server` to start tRPC server and run `npm run dev:client` to st
 * httpx JetBrains Plugin: https://plugins.jetbrains.com/plugin/18807-httpx-requests
 * Spring Custom Property Editor: property editor for JsonNode of Jackson https://www.baeldung.com/spring-mvc-custom-property-editor
 * trpc-spring-boot-starter: Spring Boot Starter for tRPC - https://github.com/linux-china/trpc-spring-boot-starter
+* springdoc-openapi v2.0: https://springdoc.org/v2/
